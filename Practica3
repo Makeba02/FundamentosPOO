@@ -1,0 +1,43 @@
+//Importa la clase Scanner de java.util, la cual facilita la lectura de datos desde diversas fuentes de entrada.
+import java.util.Scanner;
+//Inicio de la definición de una clase pública llamada "Main"
+public class Main {
+    //Define el método principal de la clase
+    public static void main(String[] args) {
+        //Declara una variable llamada numint de tipo entero
+        int numint;
+        //Declara varias variables de tipo double
+        double numdbl, res1, res2, res3, res4, res5, res6;
+        //Imprime un mensaje de bienvenida
+        System.out.printf("\n\tBienvenidos, favor de seguir las instrucciones\n");
+        //Establece un medio para leer datos desde la entrada estándar (teclado) mediante la creación de un objeto Scanner llamado scanner
+        Scanner scanner = new Scanner(System.in);
+        //Imprime un mensaje, solicitando al usuario que ingrese un número entero
+        System.out.printf("\nDigite un número entero: \n");
+        //Lee un número entero ingresado por el usuario y lo asigna a la variable numint
+        numint = scanner.nextInt();
+        //Imprime un mensaje, solicitando al usuario que ingrese un número con decimales
+        System.out.printf("\nDigite un número decimal: \n");
+        //Lee un número con decimales ingresado por el usuario y lo asigna a la variable numdbl
+        numdbl = scanner.nextDouble();
+        //Realiza una operación de suma entre dos variables y almacena el resultado en res1
+        res1 = numdbl + numint;
+        //Realiza una operación de división y almacena el resultado en la variable res2, el valor de numdbl se convierte en un entero antes de realizar la división.
+        res2 = numint / (int) numdbl;
+        //Divide el valor almacenado en la variable numint entre el valor de numdbl. El resultado se almacena en la variable res3. La división de un entero entre un decimal dará como resultado un valor decimal.
+        res3 = numint / numdbl;
+        //Divide el valor almacenado en la variable numdbl entre el valor de numint. El resultado se almacena en la variable res4. La división de un decimal entre un entero dará como resultado un valor decimal.
+        res4 = numdbl / numint;
+        //Convierte el valor de numdbl a tipo int y luego lo divide entre el valor de numint. El resultado se almacena en la variable res5. Debido a la conversión explícita, el resultado será un valor entero.
+        res5 = (int) numdbl / numint;
+        //Convierte el valor de numdbl a tipo int, lo suma al valor de numint, y el resultado se almacena en la variable res6. Debido a la conversión explícita, el resultado será un valor entero.
+        res6 = (int) numdbl + numint;
+        //Imprimir los resultados de las operaciones en la consola. Cada línea concatena el mensaje con el valor correspondiente y lo imprime.
+        System.out.printf("\nEl valor de la operación es = " + res1);
+        System.out.printf("\nEl valor de la operación es = " + res2);
+        System.out.printf("\nEl valor de la operación es = " + res3);
+        System.out.printf("\nEl valor de la operación es = " + res4);
+        System.out.printf("\nEl valor de la operación es = " + res5);
+        System.out.printf("\nEl valor de la operación es = " + res6);
+    }
+}
